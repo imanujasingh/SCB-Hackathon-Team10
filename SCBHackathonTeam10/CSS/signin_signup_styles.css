@@ -1,0 +1,96 @@
+/*modal*/
+    
+.form1 {
+    
+    opacity: 1;
+    color: black;
+}
+
+/*.login1Form {
+    padding: 30px;
+    border: none;
+    height: 100%;
+}
+
+.login2Form {
+    border: none;
+    padding: 30px;
+    height: 100%;
+}*/
+
+.Cont {
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px #222;
+    box-sizing: border-box;
+    border-radius: 10px !important;
+}
+
+/*input[type="text"],input[type="password"]{
+    height: -10%;
+    background-color: green;
+}*/
+/*.login1 {
+    width: 40%;
+    color: white;
+}
+
+.login2 {
+    width: 40%;
+    color: white;
+}*/
+
+.close {
+    width: 20%;
+    color: white;
+}
+
+.buttons {
+    width: 100%;
+}
+
+.modhead {
+    background: rgba(2, 62, 138, 1);
+}
+
+/*.login1:focus {
+    border: none !important;
+    background: none !important;
+}
+
+.login2:focus {
+    border: none !important;
+    background: none !important;
+}
+
+.NGOLog {
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+}
+.mode{
+    width: 20% !important;
+    align-self: center;
+}*/
+
+.half{
+    width: 50%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-self: center !important;
+    border: none !important;
+}
+.details{
+    width: 48% !important;
+    margin-right: 2%;
+    
+}
+image{
+    size: 1% !important;
+}
+.Welcome{
+    background-color: #008080 !important;
+}
+
+/*modal end*/

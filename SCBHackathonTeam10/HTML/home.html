@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar Start-->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="navItem">Courses<span class="tip1 tip" >Go to the subjects list</span></a>
+        <a href="../HTML/dashboard.php" class="navItem">Dashboard<span class="tip2 tip">Hey, let's track your progress</span></a>
+        <a href="../HTML/login.php" class="navItem" id="SignIn"  data-target="#loginform" data-toggle="modal">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Navbar End -->
+    <!--TO ADD-->
+    <div class="modal fade" id="loginform">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content Cont">
+                </div>
+                </div>
+                </div>
+                
+    <!-- Courses Section Start-->
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('completed')"> Completed</button>
+        <button class="btn" onclick="filterSelection('running')"> Pending</button>
+    </div>
+
+    <div class="container">
+        <div class="filterDiv completed filip-horizontal">
+            <h2>HTML</h2>
+            <p>Hey Champion, do you want to design your own website and show it to your friends?</p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseHTML.html">Let's Start</a></button>
+        </div>
+        <div class="filterDiv completed filip-horizontal">
+            <h2>CSS</h2>
+            <p>Hey Champ, do you want to show your creativity in the computers world?</p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseCSS.html">Let's Start</a></button>
+        </div>        
+        <div class="filterDiv running filip-horizontal">
+            <h2>JavaScript</h2>
+            <p>Rockstar, it's time to add more on what we have learnt in HTML and CSS. <br><b>Pre-Requisite: HTML & CSS.</b></p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseHTML.html">Let's Start</a></button>
+        </div>
+        <div class="filterDiv filip-horizontal">
+            <h2>C++</h2>
+            <p>Welcome to the programming world, It's time to program the world. Let's see how you will code yours?</p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseHTML.html">Let's Start</a></button>
+        </div>
+        <div class="filterDiv running filip-horizontal">
+            <h2>Python</h2>
+            <p>Easy Peesy, Learn the easiest programming language with fun and games in the course.</p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseHTML.html">Let's Start</a></button>
+        </div>        
+        <div class="filterDiv filip-horizontal">
+            <h2>Java</h2>
+            <p>It's time to go ahead a little more to rock in the programming world. We will design an android app.</p>
+            <h4>You will Rock!</h4>
+            <button id="start"><a href="../HTML/AboutCourseHTML.html">Let's Start</a></button>
+        </div>
+    </div> -->
+    <!-- Courses Section End -->
+    
+    <!-- javascript -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>
